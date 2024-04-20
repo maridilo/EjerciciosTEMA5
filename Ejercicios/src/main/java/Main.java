@@ -88,6 +88,8 @@ public class Main {
                     textFieldX.setVisible(false);
                     labelY.setVisible(false);
                     textFieldY.setVisible(false);
+                    labelVector.setVisible(false);
+                    textFieldVector.setVisible(false);
                     break;
                     case 1:
                     labelN.setVisible(false);
@@ -102,6 +104,8 @@ public class Main {
                     textFieldX.setVisible(false);
                     labelY.setVisible(false);
                     textFieldY.setVisible(false);
+                    labelVector.setVisible(false);
+                    textFieldVector.setVisible(false);
                     break;
                     case 2:
                 labelN.setVisible(false);
@@ -116,6 +120,8 @@ public class Main {
                 textFieldX.setVisible(false);
                 labelY.setVisible(false);
                 textFieldY.setVisible(false);
+                labelVector.setVisible(false);
+                textFieldVector.setVisible(false);
                 break;
                     case 3:
                         labelN.setVisible(false);
@@ -130,6 +136,8 @@ public class Main {
                         textFieldX.setVisible(true);
                         labelY.setVisible(true);
                         textFieldY.setVisible(true);
+                        labelVector.setVisible(false);
+                        textFieldVector.setVisible(false);
                         break;
                     case 4:
                         labelN.setVisible(false);
