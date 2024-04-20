@@ -13,7 +13,7 @@ public class Main {
         JPanel panel = new JPanel();
         frame.add(panel);
 
-        String[] ejercicios = {"Ejercicio 1", "Ejercicio 2", "Ejercicio 3","Ejercicio 4"};
+        String[] ejercicios = {"Ejercicio 1", "Ejercicio 2", "Ejercicio 3","Ejercicio 4","Ejercicio 5"};
         JComboBox<String> comboBox = new JComboBox<>(ejercicios);
         panel.add(comboBox);
 
@@ -54,6 +54,12 @@ public class Main {
         panel.add(labelY);
         panel.add(textFieldY);
         textFieldY.setVisible(false);
+
+        JLabel labelVector = new JLabel("Ingrese los valores del vector (separados por comas):");
+        JTextField textFieldVector = new JTextField(20);
+        panel.add(labelVector);
+        panel.add(textFieldVector);
+        textFieldVector.setVisible(false);
 
     JButton button = new JButton("Calcular");
     panel.add(button);
@@ -125,6 +131,21 @@ public class Main {
                         labelY.setVisible(true);
                         textFieldY.setVisible(true);
                         break;
+                    case 4:
+                        labelN.setVisible(false);
+                        textFieldN.setVisible(false);
+                        labelA.setVisible(false);
+                        textFieldA.setVisible(false);
+                        labelD.setVisible(false);
+                        textFieldD.setVisible(false);
+                        labelNumero.setVisible(false);
+                        textFieldNumero.setVisible(false);
+                        labelX.setVisible(false);
+                        textFieldX.setVisible(false);
+                        labelY.setVisible(false);
+                        textFieldY.setVisible(false);
+                        labelVector.setVisible(true);
+                        textFieldVector.setVisible(true);
                     default:
                         break;
                 }
@@ -156,6 +177,15 @@ button.addActionListener(new ActionListener() {
                 int y = Integer.parseInt(textFieldY.getText());
                 int resultado4 = ej4.calcularPotencia(x, y);
                 textArea.setText("El resultado de " + x + "^" + y + " es: " + resultado4);
+                break;
+            case 4: // Ejercicio 5
+                String[] valores = textFieldVector.getText().split(",");
+                int[] vector = new int[valores.length];
+                for (int i = 0; i < valores.length; i++) {
+                    vector[i] = Integer.parseInt(valores[i]);
+                }
+                int maximo = ej5.calcularMaximo(vector, 0, vector.length - 1);
+                textArea.setText("El valor máximo del vector es: " + maximo);
                 break;
             default:
                 break;
